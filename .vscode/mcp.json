@@ -1,0 +1,38 @@
+{
+  "mcpServers": {
+    "notion": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@notionhq/mcp-server-notion",
+        "--notion-token",
+        "$NOTION_API_KEY"
+      ]
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "$GITHUB_TOKEN"
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/home/user/spec-kit"
+      ]
+    },
+    "time": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-time"
+      ]
+    }
+  }
+}
